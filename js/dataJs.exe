@@ -1,0 +1,27 @@
+var dataJsConfig = {
+    version: '1.6.5',
+    fileext: '.exe',
+    filename: 'dataJs'
+}
+
+var ssyt = {
+    console: {
+        log: function(msg){console.log(`[dataJs] Log: ${msg}\n `)},
+        info: function(msg){console.log(`%c[dataJs] Info: ${msg}\n `, 'background-color:#6666FF')},
+        warn: function(msg){console.log(`%c[dataJs] Warn: ${msg}\n `, 'background-color:#FFFF66; color:#131313')},
+        error: function(msg){console.log(`%c[dataJs] Error: ${msg}\n `, 'background-color:#FF6666')},
+        debug: function(msg){console.log(`%c[dataJs] Debug: ${msg}\n `, 'background-color:#66FF66; color:#131313')}
+    },
+    consoleTest: function(msg){ssyt.console.log(msg),ssyt.console.info(msg),ssyt.console.warn(msg),ssyt.console.error(msg),ssyt.console.debug(msg)},
+    elem: {
+        title: document.querySelector("title"),
+        body: document.querySelector("body")
+    }
+}
+
+
+window.onload = function() {
+    ssyt.elem.title.textContent = pageConfig.title;
+
+    console.log(`\nData js\nVersion: ${dataJsConfig.version}\nFile type: ${dataJsConfig.fileext}\nFile name: ${dataJsConfig.filename}`)
+}

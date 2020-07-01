@@ -1,0 +1,12 @@
+* {
+box-sizing: inherit;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom {
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
